@@ -19,10 +19,11 @@
     align-items: center;
     justify-content: space-between;
     padding: 35px 0;
+    padding-top: 20px;
 }
 
 .logo {
-    width: 120px;
+    width: 60px;
     cursor: pointer;
 }
 
