@@ -1,0 +1,113 @@
+body {
+  background-color: hsl(225, 100%, 94%);
+  background-image: url(images/pattern-background-desktop.svg);
+  background-repeat: no-repeat;
+  font-family: "Red Hat Display", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top:50px;
+}
+
+.container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  border-radius: 18px;
+  /* padding: 15px;     */
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+  box-shadow: 0 6px 40px hsl(223, 61%, 78%);
+}
+
+.container img {
+  width: 100%;
+}
+
+p {
+  text-align: center;
+  margin-bottom: 75px;
+  font-size: 16px;
+  font-weight: lighter;
+  color: hsl(224, 23%, 55%);
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Payment Div */
+.pay {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pay a {
+  margin-left: 100px;
+  cursor: pointer;
+}
+.pay a:hover {
+  text-decoration: none;
+  color: hsl(245, 75%, 52%);
+}
+
+.bleh {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.bleh p {
+  margin: 0;
+  margin-top: 5px;
+  padding: 0;
+}
+
+.pay img {
+  margin-right: 20px;
+}
+
+/* Buttons */
+
+.btn {
+  margin-top: 45px;
+  width: 75%;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+}
+
+.proceed {
+  background-color: hsl(245, 75%, 52%);
+  border-radius: 12px;
+  color: white;
+  font-weight: bolder;
+}
+
+.proceed:hover {
+  opacity: 0.6;
+}
+
+.cancel {
+  margin-top: 30px;
+  color: hsl(224, 23%, 55%);
+  margin-bottom: 15px;
+  font-weight: bolder;
+}
+.cancel:hover {
+  color: black;
+}
+
+@media (max-width:375px) {
+    body{
+        margin: 20px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        width: 320px;
+        height: 75%;
+    }
+}
