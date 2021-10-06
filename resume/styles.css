@@ -1,0 +1,122 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    color: rgb(26, 26, 27);
+}
+
+body {
+    padding: 1rem 30rem 20rem;
+}
+
+h1 {
+    font-size: 2rem;
+    color: rgb(27, 27, 29);
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: rgba(85, 125, 155, 255);
+}
+
+.item3 {
+    color: rgba(109, 119, 150, 255);
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.4rem;
+}
+
+.item2 {
+    color: rgba(109, 119, 150, 255);
+    font-size: 1.4rem;
+}
+
+p {
+    line-height: 1.5rem;
+}
+
+li {
+    line-height: 1.5rem;
+}
+
+h3+p {
+    margin-top: 1rem;
+}
+
+h3+ul {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+ul+h3 {
+    margin-top: 1rem;
+}
+
+ul {
+    margin-left: 1rem;
+}
+
+section+section {
+    margin-top: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.Heading {
+    text-align: center;
+    margin-bottom: 5rem;
+    color: rgba(88, 128, 157, 255);
+}
+
+.Heading>p {
+    padding-top: 1rem;
+}
+
+.Contact>ul {
+    list-style-type: none;
+    margin-left: 0rem;
+}
+
+.Heading p {
+    margin-bottom: 30px;
+}
+
+.resume {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5rem;
+}
+
+.intern {
+    margin-top: 4.9rem;
+}
+
+.column1 {
+    border-right: 5px solid rgba(85, 125, 154, 255);
+    padding-right: 0.5rem;
+}
+
+fieldset {
+    border: 3px solid;
+    border-color: rgba(85, 125, 155, 255);
+    background-color: rgb(246, 248, 247);
+    box-sizing: border-box;
+    box-shadow: 0 0 15px #000;
+    grid-area: 1 / 1;
+    /* first row, first column */
+    padding: 100px;
+    width: inherit;
+}
+
+legend {
+    font: 25pt/0 'Averia Serif Libre';
+    /* margin: auto; */
+    font-weight: bold;
+    /* to center */
+    /* padding: 0 4px; */
+}
