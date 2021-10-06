@@ -70,6 +70,7 @@
 }
 
 .section1{
+    cursor:default;
     display: inline-block;
     padding:20px;
     justify-content: center;
