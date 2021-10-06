@@ -33,7 +33,7 @@ input[type="checkbox"]{
 .container{
   display: none;
   background: #fff;
-  width: 410px;
+  width: 700px;
   padding: 30px;
   box-shadow: 0 0 8px rgba(0,0,0,0.1);
 }
@@ -128,3 +128,5 @@ form .signup-link a{
 form .signup-link a:hover{
   text-decoration: underline;
 }
+
+
