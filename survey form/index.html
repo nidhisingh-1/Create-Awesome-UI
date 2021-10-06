@@ -1,0 +1,87 @@
+
+<html>
+    
+    <link rel="stylesheet" href="style.css">
+    <h1 id="title"> Online Education Survey Form</h1>
+    
+    <p id="description">Thank you for taking the time to help us </p>
+    
+    <div id="body">
+    
+    <form id="survey-form">
+      
+      <label id="name-label" for="name">
+      <p>Name:</p>
+      </label>
+      
+      <input id="name" type="text" placeholder="Enter Your Name" required>
+      
+      
+       <label id="email-label" for="email">
+      <p>Email:</p>
+      </label>
+      
+      <input id="email" type="email" placeholder="Enter Your Email" required>
+
+      
+      
+       <label id="number-label" for="number">
+      <p>Age:</p>
+      </label>
+      
+      <input id="number" type="number" placeholder="Enter Your Age" min="6" max="60" required>
+      
+      <p>Which suits you:</p>
+      <select id="dropdown" >
+        
+        
+        <option value="Student">Student</option>
+        <option value="Mentor">Mentor</option>
+        <option value="None">None</option>
+        <option value="Both">Both</option>
+
+      </select>
+      <p>which is more flexible</p>
+      
+      <input type="radio" name="option" value="1">Online</input>
+      <br>
+      <input type="radio" name="option" value="2">Offline</input>
+      <br>
+      
+      <p>How are you benifited from online learning</p>
+      
+      <input type="radio" name="pick" value="1">Efficiency</input>
+      <br>
+      <input type="radio" name="pick" value="2">Accessibility Of Time And Place</input>
+      <br>
+     <input type="radio" name="pick" value="3">Affordability</input>
+    <br>
+     <input type="radio" name="pick" value="4">Improved Student Attendance </input>
+    <br>
+     <input type="radio" name="pick" value="5">Suits A Variety Of Learning Styles</input>
+     <br>
+   
+    
+    <p>What  complications did you encounter in online learning</p>
+    
+    <input type="checkbox"  value="1">Inability To Focus On Screens</input>
+    <br>
+     <input type="checkbox"  value="2">Understanding of Technology</input>
+    <br>
+     <input type="checkbox"  value="3">Resources</input>
+    <br>
+     <input type="checkbox"  value="4">Sense Of Isolation</input>
+    <br>
+     <input type="checkbox"  value="5">Manage Screen Time</input>
+    <br>
+    
+    <textarea id="comment" rows="5" cols="50">Add Your Comment Here</textarea>
+    <br>
+    <input id="submit" type="submit" value="Submit">
+                
+    </form>
+    
+    </div>
+Thank you   
+    
+</html>
