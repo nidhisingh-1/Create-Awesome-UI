@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&family=Mulish:wght@400;700&display=swap');
+
+
+
+*{
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+body{
+  height: 100vh;
+  width: 100%;
+  /* background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%); */
+  background: linear-gradient(115deg, #70e5f0 10%, #aa22e9 90%);
+}
+.show-btn{
+  background: #fff;
+  padding: 10px 20px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #3498db;
+  cursor: pointer;
+  box-shadow: 0 2.2px 1.6px rgba(0, 0, 0, 0.034), 0 3.7px 4.3px rgba(0, 0, 0, 0.048), 0 8.7px 4.3px rgba(0,0,0, 0.45); 
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+.show-btn:hover{
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.7px 5.3px rgba(0,0,0, 0.45);
+}
+.show-btn, .container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.header{
+  background: linear-gradient(to left, #74ebd5, #b634f3);
+  padding: 30px 0;
+  
+}
+.header h2{
+  color: #fff;  
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.85);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+input[type="checkbox"]{
+  display: none;
+}
+.container{
+  display: none;
+  background: #fff;
+  width: 410px;
+  padding: 0px;
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.7px 5.3px rgba(0,0,0, 0.45);
+  border-radius: 50px 1px;
+  /* box-shadow: 0 0 8px rgba(0,0,0,0.1); */
+
+}
+#show:checked ~ .container{
+  display: block;
+}
+.container .close-btn{
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  color:#fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+.container .close-btn:hover{
+  color: rgba(0, 0, 0, 0.58);
+}
+.container .text{
+  font-size: 35px;
+  font-weight: 600;
+  text-align: center;
+}
+.container form{
+  margin-top: -20px;
+}
+.container form .data{
+  height: 45px;
+  width: 100%;
+  margin: 40px 0;
+}
+form .data label{
+  font-size: 18px;
+  font-weight: 500;
+  display: inline-block;
+  margin-bottom: 5px;
+  padding-left: 19px;
+}
+
+form .data input{
+  height: 100%;
+  width: 90%;
+  padding-left: 10px;
+  margin-left: 20px;
+  font-size: 15px;
+  border: 1px solid silver;
+}
+form .data input ::placeholder{
+  height: 100%;
+  width: 90%;
+  padding-left: 10px;
+  margin-left: 20px;
+  font-size: 14px;
+  border: 1px solid silver;
+}
+/* form .data input:focus{
+  border-color: #3498db;
+  border-bottom-width: 2px;
+} */
+form .data input:focus{
+  outline: 0;
+  border-color: #777;
+}
+form .forgot-pass{
+  margin-top: -2px;
+  padding-left: 20px;
+}
+form .forgot-pass a{
+  color: #3498db;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+form .forgot-pass a:hover{
+  text-decoration: none;
+  color: #3499db;
+  font-weight: 410;
+}
+form .btn{
+  margin: 39px 20px;
+  height: 45px;
+  width: 90%;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 1.3px 1.2px rgba(0, 0, 0, 0.030), 0 1.4px 2.2px rgba(0, 0, 0, 0.048), 0 3.7px 8.3px rgba(0,0,0, 0.45);
+}
+form .btn .inner{
+  height: 100%;
+  width: 300%;
+  position: absolute;
+  left: -100%;
+  z-index: -1;
+  background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
+  transition: all 0.4s;
+}
+form .btn:hover .inner{
+  left: 0;
+}
+form .btn button{
+  height: 100%;
+  width: 100%;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+form .signup-link{
+  text-align: center;
+  padding-bottom: 15px;
+}
+form .signup-link a{
+  color: #3498db;
+  text-decoration: none;
+}
+form .signup-link a:hover{
+  text-decoration: none;
+  color: #3499db;
+  font-weight: 410;
+}
