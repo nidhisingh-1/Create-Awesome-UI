@@ -1,0 +1,112 @@
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.plan {
+    width: 80%;
+    height: 250px;
+    padding: 50px;
+    background: #ffffff40;
+    text-align: center;
+    margin: 10px auto;
+    margin-top: 300px;
+}
+
+.container {
+    padding: 2px 16px;
+}
+
+h3 {
+    color: white;
+    text-align: center;
+}
+
+p {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.topnav {
+    overflow: hidden;
+}
+
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center top;
+    padding: 20px 16px;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.topnav a.active {
+    background-color: green;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.plan .plan1 {
+    width: 90%;
+    padding: 50px 20px;
+    background: white;
+    text-align: left;
+    border-radius: 10px;
+}
+
+.plan h2 {
+    background: white;
+    width: 200px;
+    margin-left: 40%;
+    padding: 20px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.plan .plan1 input {
+    font-size: 15px;
+    width: 186px;
+    font-weight: bold;
+    font-family: cursive;
+    padding: 20px 10px;
+    background: #f1f1f1;
+    border: none;
+    outline: none;
+}
+
+.content {
+    width: 96%;
+    height: 600px;
+    margin: 100px auto;
+}
+
+.main {
+    margin: 2%;
+}
+
+.card1 {
+    width: 33%;
+    display: inline-block;
+    box-shadow: 2px 2px 20px black;
+    border-radius: 5px;
+    margin: 2%;
+}
+
+.container {
+    justify-content: right;
+}
+
+img {
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+}
