@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Random Survey form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 id="title"> Random Survey </h1>
+        </header>
+        <form>
+            <div class="form-group">
+                <p>
+                    Have you tried a random survey before?
+                </p>
+                <label>
+                    <input name="user-recommend" value="definitely" type="radio" class="input-radio" /> Yes, I have.</label>
+                <label>
+                    <input name="user-recommend" value="definitely" type="radio" class="input-radio" /> No, I
+                    haven't.</label>
+                <label>
+                    <input name="user-recommend" value="definitely" type="radio" class="input-radio" /> Maybe, I'm not
+                    sure.</label>
+            </div>
+            <div class="form-group">
+                <p>Do you think survey needs to be specific? Why?</p>
+                <textarea id="comments" class="input-textarea" name="comment"
+                    placeholder="Enter your comment here..."></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">
+                    Submit
+                </button>
+            </div>
+            <div class="form-group">
+                <p>
+                    What would you like to see improved?
+                    <span class="clue">(Check all that apply)</span>
+                </p>
+    
+                <label><input name="topic" value="food" type="checkbox" class="input-checkbox" /> Food</label>
+                <label><input name="topic" value="fashion" type="checkbox" class="input-checkbox" /> Fashion </label>
+                <label><input name="topic" value="services" type="checkbox" class="input-checkbox" /> Services</label>
+                <label><input name="topic" value="education" type="checkbox" class="input-checkbox" /> Education </label>
+                <label><input name="topic" value="products" type="checkbox" class="input-checkbox" /> Products</label>
+                <label><input name="topic" value="transport" type="checkbox" class="input-checkbox" /> Tansportation</label>
+                <label><input name="topic" value="experiences" type="checkbox" class="input-checkbox" /> Expereinces</label>
+                <label><input name="topic" value=opinion type="checkbox" class="input-checkbox" /> Opinion</label>
+                <label><input name="topic" value="others" type="checkbox" class="input-checkbox" /> Other</label>
+                <p> If others, please specify below: </p>
+                <input type="text" id="text">
+            </div>
+            <div class="form-group">
+                <p>
+                    Have you tried a random survey before?
+                </p>
+                <label>
+                    <input name="user-recommend" value="definitely" type="radio" class="input-radio" /> Yes, I would like
+                    to... </label>
+                <label>
+                    <input name="user-recommend" value="definitely" type="radio" class="input-radio" /> No, I have no
+                    time.</label>
+            </div>
+            <p>If yes, fill out the form below: </p>
+            <div class="form-group">
+                <p>What is your pronoun?</p>
+                <select id="dropdown" name="pronoun" class="form-control" required>
+                    <option disabled selected value>Select here...</option>
+                    <option value="he">He/His</option>
+                    <option value="she">She/Her</option>
+                    <option value="they">They/They</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label id="name-label" class="form-profile" for="name">Name</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required />
+            </div>
+            <div class="form-group">
+                <label id="email-label" class="form-profile" for="email">Email</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Enter your Email" required />
+            </div>
+            <div class="form-group">
+                <label id="number-label" class="form-profile" for="number">Age<span class="clue">(optional)</span></label>
+                <input type="number" name="age" id="number" min="10" max="99" class="form-control" placeholder="Age" />
+            </div>
+            <div class="form-group">
+                <button type="submit" id="submit" class="submit-button">
+                    Submit
+                </button>
+            </div>
+        </form>
+        <footer>
+            <p> Coded by Rio Cantre </p>
+        </footer>
+    </div>
+</body>
+</html>
