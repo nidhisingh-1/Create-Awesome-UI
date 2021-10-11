@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@300;400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Bitter', serif;
+}
+body {
+  background: hsla(175, 49%, 42%, 1);  
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 30px;
+  display: block;
+}
+
+h1{
+  text-align: center;
+}
+p,
+.form-profile{
+  font-size: 20px;
+}
+
+footer p {
+  text-align: center;
+  font-size: 10px;
+}
+
+form {
+  padding: 50px;
+  background: hsla(183, 77%, 22%, 1);
+  color: #E6E3E1;
+  border-radius: 30px;
+  display: block;
+}
+label{
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin-bottom: 0.5rem;
+}
+
+#text,
+.form-control {
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0; 
+  border: none;
+  margin-top: 0;
+}
+
+textarea{
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #F57C1F;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.input-radio,
+.input-checkbox {
+  display: inline-block;
+  margin-right: 0.625rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+}
+
+@media (width: 480px) {
+  .container {
+    width: 100%;
+  }
+  form {
+    padding: 2.5rem;
+    width: 100%;
+    margin: 0
+  }
+}
