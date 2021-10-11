@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MacOS Login Window</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="window">
+        <header>
+            <div class="buttons">
+                <span class="close">
+                    <span></span>
+                    <span></span>
+                </span>
+                <span class="minimize">
+                    <span></span>
+                </span>
+                <span class="expand">
+                    <span></span>
+                    <span></span>
+                </span>
+            </div>
+            <h2>Log in</h2>
+        </header>
+
+        <main>
+            <div class="message">
+                <h2>Hello!</h2>
+                <p>Log in to your existent account</p>
+            </div>
+
+            <form>
+                <div class="input-group">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" placeholder="example@email.com">
+                </div>
+                <div class="input-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password">
+                </div>
+
+                <a href="#forgot-password">Forgot your password?</a>
+
+                <div class="button-group">
+                    <button type="button">Cancel</button>
+                    <button class="primary" type="submit">Log in</button>
+                </div>
+            </form>
+        </main>
+    </div>
+</body>
+</html>
