@@ -1,0 +1,69 @@
+<html>
+<head>
+<title></title>
+<!-- Apply styles to html elements -->
+<style>
+*{
+margin:0; padding:0; boxsizing:border-box;
+}
+header{
+width: 100%; height: 100vh;
+background-color: white;
+background-repeat: no-repeat;
+background-size: cover;
+}
+nav{
+width: 100%; height: 15vh;
+background: black;
+display: flex; justify-content: space-between;
+align-items: center;
+}
+nav .mainmenu{
+width: 40%;
+display: flex; justify-content: space-around;
+}
+main{
+width: 100%; height: 85vh;
+display: flex; justify-content: center;
+align-items: center;
+text-align: center;
+}
+section h3{
+letter-spacing: 3px; font-weight: 200;
+}
+section h1{
+text-transform: uppercase;
+}
+section div{
+animation:changeborder 10s infinite linear;
+border: 7px solid red;
+}
+@keyframes changeborder{
+0%
+20%
+40%
+}
+</style>
+</head>
+<body>
+<header>
+<nav>
+<div class = "logo" <h3 style="color:white;">MYLOGO</h3></div>
+<!--Lets define the menu items now-->
+<div class = "mainmenu">
+<a href="https://google.com">Home</a>
+<a href="https://amazon.in">About Us</a>
+<a href="https:/flipkart.com">Contact Us</a>
+</div>
+</nav>
+
+<main>
+<section>
+<div class = "change_text"><b>Howdy! Take care, welcome to electronics shop</b></div>
+<p><i>All your electronics needs in one place</i></p><br>
+<input type = button value = "view more">
+</section>
+</main>
+</header>
+</body>
+</html>
