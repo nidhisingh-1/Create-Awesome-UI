@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titel der Seite | Name der Website</title>
+
+    <style>
+        h1 { font-size: 5.5em; background-color: DeepSkyBlue; text-align: center; }
+    h2 {text-align: center;}
+    p { font-size: 2.5em; text-align: center; }
+    ul { font-size: 2em; }
+
+    /*CSS Topnav*/
+
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .topnav {
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    .topnav a {
+        float: left;
+        display: block;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    .topnav a:hover {
+        background-color: #ddd;
+        color: black;
+    }
+
+    .topnav a.active {
+        background-color: #4CAF50;
+        color: white;
+    }
+
+    .topnav .icon {
+        display: none;
+    }
+
+    @media screen and (max-width: 600px) {
+        .topnav a:not(:first-child) {display: none;}
+        .topnav a.icon {
+            float: right;
+            display: block;
+        }
+    }
+
+    @media screen and (max-width: 600px) {
+        .topnav.responsive {position: relative;}
+        .topnav.responsive .icon {
+            position: absolute;
+            right: 0;
+            top: 0;
+        }
+        .topnav.responsive a {
+            float: none;
+            display: block;
+            text-align: left;
+        }
+    }
+
+    /*Slideshow*/
+
+
+    nav ul {
+        text-align: center;
+        width: 100%;
+        position:relative;
+        left: 40%;
+
+    }
+    nav li {
+        display: inline;   /* zeigt li nebeneinander an; nicht mit float machen!!! */
+        list-style-type: none;
+        margin-right: 15px;
+    }
+
+
+
+    .center {
+        display: block;
+        margin-left: 20%;
+        margin-right: auto;
+    }
+
+    .main-screen {
+        z-index: 98;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    .slideshow {
+        display: block;
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        z-index: 99;
+        list-style: none;
+    }
+
+
+    .image {
+        position: absolute;
+        z-index: 50;
+        width: 100%;
+        height: 100%;
+        left: 20%;
+        top: 50%;
+        overflow: hidden;
+        display: block;
+        transition:opacity 1s ease-in-out;
+        -moz-transition:opacity 1s ease-in-out;
+        -webkit-transition:opacity 1s ease-in-out;
+    }
+
+    .image{
+        opacity: 0;
+    }
+
+    .active{
+        opacity: 1;
+    }
+    .nav-arrows a {
+        width: 42px;
+        height: 42px;
+        background: black;
+        position: absolute;
+        top: 51%;
+        left: 30px;
+        text-indent: -9000px;
+        cursor: pointer;
+        margin-top: -21px;
+        opacity: 0.9;
+        z-index: 99999;
+    }
+
+    .nav-arrows a:first-child{
+        left: auto;
+        right: 30px;
+        background-position: top right;
+    }
+
+    .nav-arrows a:hover {
+        opacity: 1;
+    }
+
+    .back-to-top {
+        background:red;
+        position: fixed;
+        bottom:20px;
+        right:20px;
+        padding:1em;
+        z-index: 100;
+    }
+    </style>
+</head>
+<body>
+
+<script>
+
+    $(document).ready(function() {
+
+        var time = 10000,
+            timer;
+        $('.slideshow li:first-child').addClass('active');
+
+        function play() {
+            timer = setInterval(function(){
+                var next = $(".slideshow .active").removeClass("active").next(".image");
+                if (!next.length) {
+                    next = $(".slideshow .image:first");
+                }
+                next.addClass("active");
+            }, time);
+        }
+        play();
+
+        /*Start of function for next button  */
+        function forward() {
+            $('.forward').click(function() {
+                clearInterval(timer);
+                play();
+                var go = $(".slideshow .active").removeClass("active").next(".image").addClass("active");
+                if (!go.length) {
+                    go = $(".slideshow .image:first");
+                }
+                go.addClass("active");
+            });
+        }
+
+        forward();
+
+        /*Start of function for prev button  */
+        function previous() {
+            $('.backward').click(function() {
+
+                clearInterval(timer);
+                play();
+                var go = $(".slideshow .active").removeClass("active").prev(".image").addClass("active");
+                if (!go.length) {
+                    go = $(".slideshow .image:last");
+                }
+                go.addClass("active");
+            });
+        }
+
+        previous();
+
+    });
+
+    /*Blendet Weiter und Zurück button aus/ein  */
+    var timer;
+    $(document).mousemove(function() {
+        if (timer) {
+            clearTimeout(timer);
+            timer = 0;
+        }
+
+        $('.backward, .forward').fadeIn();
+        timer = setTimeout(function() {
+            $('.backward, .forward').fadeOut()
+        }, 3000)
+    })
+</script>
+
+<!-- Sichtbarer Dokumeöntinhalt im body -->
+
+<div id="nav-arrows" class="nav-arrows">
+    <a href="#" class="forward">Weiter</a>
+    <a href="#" class="backward">Zurück</a>
+</div>
+
+<div class="main-screen">
+    <ul class="slideshow">
+        <li class="image"><img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/street-royalty-free-image-1580912705.jpg"  alt="sunset" class="center" /></li>
+        <li class="image"><img src="https://www.publicdomainpictures.net/pictures/180000/nahled/fast-sport-car-1466168715EF7.jpg"  alt="secondsunset"  class="center" /></li>
+        <li class="image"><img src=" https://cdn.pixabay.com/photo/2018/10/13/13/52/concept-car-3744254_1280.jpg" alt="us" class="center"/></li>
+    </ul>
+</div>
+<h1>Destination trips</h1>
+<p>Lorem ipsum</p>
+<h1>Pictures of our Memories</h1>
+<p>Lorem ipsum dolor sit amet, consectetur adipisici elit, …</p>
+
+
+</body>
+
+</html>
