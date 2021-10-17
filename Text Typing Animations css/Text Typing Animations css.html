@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Design by foolishdeveloper.com -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Text Typing Animations</title>
+  <style media="screen">
+    .type {
+  display:inline-block;
+
+  vertical-align: bottom;
+}
+
+.type > span {
+  color: #14f3db;
+  display:grid;
+  overflow: hidden;
+  height:1.2em;
+}
+
+.type span span {
+  width:0%;
+  max-width:max-content;
+  overflow: hidden;
+  height:inherit;
+  word-break:break-all;
+  animation:
+    c 0.5s infinite steps(1),
+    t 2s linear infinite alternate,
+    m 16s steps(4) infinite;
+}
+.type span span:before {
+  content:" ";
+  display:inline-block;
+}
+
+@keyframes t{
+  90%,100% {width:100%}
+}
+
+@keyframes c{
+  0%,100%{box-shadow:5px 0 0 #0000}
+  50%    {box-shadow:5px 0 0 white}
+}
+
+@keyframes m{
+  100% {transform:translateY(-400%)}
+}
+
+
+body {
+  font-size:40px;
+  margin: 100px auto;
+  margin-left: 50px;
+  color: white;
+  background: #191d21;
+  font-family: sans-serif;
+}
+
+  </style>
+</head>
+<body>
+
+I am a <span class="type">
+  <span>
+    <span>Developer</span>
+    <span>Web Designer</span>
+    <span>Blogger</span>
+    <span>YouTuber</span>
+  </span>
+</span>
+</body>
+</html>
