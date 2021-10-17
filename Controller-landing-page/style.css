@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 
 * {
   margin: 0;
@@ -7,7 +7,7 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   -webkit-user-select: none; /* Chrome all / Safari all */
   -moz-user-select: none; /* Firefox all */
   -ms-user-select: none; /* IE 10+ */
@@ -76,6 +76,7 @@ nav ul li a {
   text-decoration: none;
   color: #000;
   font-size: 14px;
+  padding: 10px;
 }
 
 /* css hack 😎😎 */
@@ -89,7 +90,9 @@ label {
 }
 
 nav ul li a:hover {
-  color: #ff5ea2;
+  color: #fdfdfd;
+  background: linear-gradient(to right, #fb5283, #ff3527);
+  font-style: oblique;
 }
 
 .row {
@@ -155,7 +158,7 @@ button:hover {
 }
 
 .col-1::after {
-  content: '';
+  content: "";
   position: absolute;
   left: -40px;
   top: 8px;
@@ -344,7 +347,7 @@ button:hover {
     transition: 0.5s;
   }
 
-  input[type='checkbox']:checked ~ nav > .menuList {
+  input[type="checkbox"]:checked ~ nav > .menuList {
     display: block;
   }
 }
