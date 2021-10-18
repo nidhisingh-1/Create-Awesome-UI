@@ -1,0 +1,163 @@
+:root {
+    background-image: url('https://images.unsplash.com/photo-1563089145-599997674d42?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8ZGFyayUyMHBpbmt8ZW58MHx8MHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+a:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+#container {
+    display: flex;
+    align-self: center;
+    flex-direction: row;
+    width: 1400px;
+    font-family: Oxygen;
+    margin-left: 20px;
+}
+
+#left-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#name {
+    font-size: 3em;
+    color: pink;
+}
+
+#locations {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.25em;
+    margin-top: 20px;
+}
+
+#locations a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #aba3ee;
+}
+
+#desc {
+    margin-left: 20px;
+    text-align: center;
+    color: #aba3ee;
+    font-weight: bolder;
+}
+
+#social {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 60px;
+    top: 50px;
+    align-items: center;
+    font-size: 2em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#social a {
+    margin-right: 2em;
+}
+
+#right-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    font-family: Oxygen;
+}
+
+#profile-pic {
+    height: 13rem;
+    width: 13rem;
+    border-radius: 13rem;
+    border: 10px solid pink;
+    justify-self: center;
+}
+
+.fa {
+    color: pink;
+    height: 50px;
+}
+
+.image {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 1rem;
+    margin-right: 13px;
+    margin-bottom: 20px;
+}
+
+.blog-image {
+    width: 15rem;
+    height: 6rem;
+    border-radius:30px;
+}
+
+#heading {
+    font-size: 2rem;
+    color: pink;
+}
+
+.title {
+    font-size: 1.5rem;
+    color: pink;
+    margin-left: 15px;
+    font-weight: bolder;
+}
+
+#blogs {
+    display: flex;
+    flex-direction: row;
+}
+
+.blog {
+    font-size: 1rem;
+    color: pink;
+}
+
+.blog-box {
+    margin-right: 20px;
+}
+
+.place {
+    font-size: 1.5rem;
+    color: pink;
+    font-style: italic;
+    margin-left: 15px;
+}
+
+.list {
+    font-size: 1.2rem;
+    color: #b8b7f0;
+    margin-left: 15px;
+    line-height: 20px;
+    margin-bottom: 10px;
+    font-weight: bolder;
+}
+
+.posts {
+    font-size: 1.5rem;
+    color: pink;
+    margin-left: 15px;
+    font-weight: bolder;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    #container {
+        display: flex;
+        flex-direction: column;
+    }
+    #right-container {
+        margin-top: 20px;
+    }
+}

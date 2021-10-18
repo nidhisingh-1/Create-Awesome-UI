@@ -1,0 +1,67 @@
+body{
+    background-color: rgb(129, 170, 218);
+    font-family: 'Fredoka One', cursive;
+}
+p{
+    color:  #e3f2fd;
+}
+.design{
+    background-color: rgb(255, 238, 0);
+}
+.images{
+    width: 30%;
+    height: 30%;
+    /* border: 1px solid black; */
+    margin: 1.6%;
+    float: left;
+}
+.flex .relative p{
+    color: rgb(129, 170, 218);
+}
+/*  rgb(186, 243, 221) */
+#navbarSupportedContent .nav-link:hover{
+    color: rgb(255,255,255);
+}
+
+.navbar-brand{
+    font-family: 'Fredoka One', cursive;
+}
+#navbarSupportedContent .font{
+    font-family: 'Fredoka One', cursive;
+}
+.font{
+    font-family: 'Fredoka One', cursive;
+}
+.B{
+    border: tomato;
+}
+
+.navbar.scrolled{
+    background: rgb(255, 238, 0);
+    transition: background 1000ms;
+}
+#mainNavbar .navbar{
+    margin-bottom: 50px;
+}
+#carous{
+    margin-top: 50px;
+}
+.top{
+    text-align: center;
+}
+
+.middle{
+    text-align: end;
+}
+.one{
+    height: 12px;
+    border: 0;
+    box-shadow: inset 0 12px 12px -12px rgba(0, 0, 0, 0.5);
+}
+
+hr .two {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
