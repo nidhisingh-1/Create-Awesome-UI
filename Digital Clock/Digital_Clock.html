@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Digital Clock With Date</title>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      /* font-family: 'Poppins', sans-serif; */
+      font-family: 'Chakra Petch', sans-serif;
+    }
+
+    html,
+    body {
+      display: grid;
+      height: 100%;
+      place-items: center;
+      background: #000;
+    }
+
+    .datetime {
+      height: 180px;
+      width: 380px;
+      position: relative;
+      background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+      border-radius: 10px;
+      cursor: default;
+      animation: animate 1.5s linear infinite;
+    }
+
+    .datetime .display,
+    .datetime #help {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .datetime .display {
+      z-index: 999;
+      height: 160px;
+      width: 360px;
+      background: #1b1b1b;
+      border-radius: 6px;
+      text-align: center;
+      line-height: 70px;
+    }
+
+    .display .time {
+      color: #fff;
+      font-size: 50px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: animate 1.5s linear infinite;
+    }
+
+    .display .date {
+      color: #fff;
+      font-size: 25px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: animate 1.5s linear infinite;
+    }
+
+    @keyframes animate {
+      100% {
+        filter: hue-rotate(360deg);
+      }
+    }
+
+    .datetime #help {
+      height: 100%;
+      width: 100%;
+      border-radius: 10px;
+      background: inherit;
+    }
+
+    .datetime #help:first-child {
+      filter: blur(7px);
+    }
+
+    .datetime #help:last-child {
+      filter: blur(20px);
+    }
+  </style>
+</head>
+
+<body onload="initClock()">
+
+  <!--digital clock start-->
+  <div class="datetime">
+    <div class="display">
+      <div class="date">
+        <span id="dayname">Day</span>,
+        <span id="month">Month</span>
+        <span id="daynum">00</span>,
+        <span id="year">Year</span>
+      </div>
+      <div class="time">
+        <span id="hour">00</span>:
+        <span id="minutes">00</span>:
+        <span id="seconds">00</span>
+        <span id="period">AM</span>
+      </div>
+    </div>
+    <span id="help"></span>
+    <span id="help"></span>
+  </div>
+  <!--digital clock end-->
+
+  <script type="text/javascript">
+    function updateClock() {
+      var now = new Date();
+      var dname = now.getDay(),
+        mo = now.getMonth(),
+        dnum = now.getDate(),
+        yr = now.getFullYear(),
+        hou = now.getHours(),
+        min = now.getMinutes(),
+        sec = now.getSeconds(),
+        pe = "AM";
+
+      if (hou >= 12) {
+        pe = "PM";
+      }
+      if (hou == 0) {
+        hou = 12;
+      }
+      if (hou > 12) {
+        hou = hou - 12;
+      }
+
+      Number.prototype.pad = function (digits) {
+        for (var n = this.toString(); n.length < digits; n = 0 + n);
+        return n;
+      }
+
+      var months = ["January", "February", "March", "April", "May", "June", "July", "Augest", "September", "October", "November", "December"];
+      var week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      var ids = ["dayname", "month", "daynum", "year", "hour", "minutes", "seconds", "period"];
+      var values = [week[dname], months[mo], dnum.pad(2), yr, hou.pad(2), min.pad(2), sec.pad(2), pe];
+      for (var i = 0; i < ids.length; i++)
+        document.getElementById(ids[i]).firstChild.nodeValue = values[i];
+    }
+
+    function initClock() {
+      updateClock();
+      window.setInterval("updateClock()", 1);
+    }
+  </script>
+
+</body>
+
+</html>
