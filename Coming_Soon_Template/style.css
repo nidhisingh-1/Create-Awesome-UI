@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+    /* overflow-y: hidden; */
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.bg {
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(5, 5, 5, 0.4)), url("img/bg.jpg ");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    height: 100vh;
+    width: 100%;
+}
+
+.update {
+    font-size: 100px;
+    animation-name: updation;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    position: relative;
+    top: 30%;
+    opacity: 0;
+}
+
+.title {
+    font-size: 40px;
+    animation-name: title;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    position: relative;
+    opacity: 0;
+    top: 25%;
+}
+
+.msg {
+    font-size: 20px;
+    animation-name: msg;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+    position: relative;
+    top: 35%;
+}
+
+.icons {
+    position: relative;
+    top: 50%;
+}
+
+i {
+    font-size: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+@keyframes title {
+    0% {
+        opacity: 1;
+        right: 100%;
+    }
+    100% {
+        opacity: 1;
+        right: 0%;
+    }
+}
+
+@keyframes updation {
+    0% {
+        opacity: 0;
+        top: 0%;
+    }
+    100% {
+        opacity: 1;
+        top: 30%;
+    }
+}
+
+@keyframes msg {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .title {
+        top: 16%;
+    }
+    .msg {
+        top: 25%;
+        padding: 10px;
+    }
+    .icons {
+        top: 30%;
+    }
+    @keyframes updation {
+        0% {
+            opacity: 0;
+            top: 0%;
+        }
+        100% {
+            opacity: 1;
+            top: 20%;
+        }
+    }
+}
