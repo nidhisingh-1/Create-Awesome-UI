@@ -1,0 +1,148 @@
+body{
+    background-color:#262626;
+    font-family:helvetica;
+  }
+  div.header-img{
+    width:100%;
+   
+    
+    position:fixed;
+  }
+  #header-img{
+    width:250px;
+    
+    margin:auto;
+    display:block;
+  }
+  div.nav-bar{
+    overflow:hidden;
+    position:fixed;
+    
+    width:100%;
+    top:47px;
+  }
+  .nav-link{
+    color:white;
+    text-decoration:none;
+    text-align:center;
+    font-size:18px;
+    padding:14px 50px;
+    float:left;
+    transition:background .5s ease;
+  }
+  .nav-link:hover{
+    background-color:lightpink;
+    
+  }
+  .title{
+    margin-top:150px;
+    color:#008fb3;
+    text-align:center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  #email{
+    display:block;
+    margin:auto;
+    width:180px;
+    padding:8px;
+    border-radius:50px;
+    border:none;
+    background-color:palevioletred;
+    transition:width .5s ease, background .5s ease;
+    font-size:15px;
+  }
+  #email::placeholder{
+    color:white;
+    
+  }
+  #email:hover{
+    background-color:#008fb3;
+    width:300px;
+  }
+  #submit{
+    display:block;
+    opacity:0.5;
+    margin:auto;
+    padding:8px;
+    border:none;
+    border-radius:50px;
+    width:80px;
+    background-color:palevioletred;
+    margin-top:20px;
+    color:white;
+    font-size:15px;
+    transition:background .5s ease;
+  }
+  #submit:hover{
+    background-color:#008fb3;
+  }
+  .text{
+    width:700px;
+    margin:auto;
+    color:#008fb3;
+    margin-top:100px;
+    transition:text-shadow .5s ease;
+    
+  }
+  .text:hover{
+    text-shadow:0px 0px 10px ;
+  }
+  #video{
+    margin:auto;
+    display:block;
+    margin-top:100px;
+    margin-bottom:100px;
+    background-color:#008fb3;
+    padding:5px;
+  }
+  div.flex-container{
+    display:flex;
+    justify-content:center;
+    text-align:center;
+  }
+  div.products{
+    background-color:white;
+    margin:20px;
+    transition:box-shadow .3s ease;
+  }
+  .products:hover{
+    box-shadow:0px 0px 10px #008fb3 ;
+  }
+  div.product-title{
+    padding:10px;
+    background-color:lightcoral;
+    opacity:80%;
+    opacity:1;
+    color:white;
+    text-align:center;
+  }
+  div.product-description{
+    color:#008fb3;
+  }
+  #product-submit{
+    background-color:lightcoral;
+    border:none;
+    width:100%;
+    color:white;
+    text-decoration:none;
+    font-size:20px;
+    padding:15px;
+    transition:background .5s ease;
+  }
+  #product-submit:hover{
+    background-color:#008fb3;;
+  }
+  @media screen and (max-width:600px){
+    .flex-container{
+      flex-direction:column;
+    }
+    .nav-link{
+      width:100%;
+      margin:auto;
+    }
+    .text{
+      width:400px;
+    }
+  }
+  
+  
