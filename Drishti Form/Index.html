@@ -1,0 +1,71 @@
+<link rel="stylesheet" href="Style.css" />
+<!DOCTYPE html>
+<header class="header">
+  <h1 id="title">Drishti RCBPIT Membership Form</h1>
+  <p id="description">
+    Please fill all the details carefully as these will be used for your
+    certificate
+  </p>
+</header>
+<form id="survey-form">
+  <label id="email-label" for="email">Email</label>
+  <input
+    type="email"
+    name="email"
+    id="email"
+    placeholder="Enter Your Email"
+    required
+  />
+  <label id="name-label" for="name">Name</label>
+  <input
+    type="text"
+    name="name"
+    id="name"
+    placeholder="Enter Your Full Name"
+    required
+  />
+  <label id="number-label" for="number">Age</label>
+  <input
+    type="number"
+    name="number"
+    id="number"
+    placeholder="Enter your age"
+    min="16"
+    max="99"
+    required
+  />
+  <p>Which department whould you like to join?</p>
+  <select id="dropdown" required>
+    <option disabled selected value>Select your department</option>
+    <option value="Education">Education</option>
+    <option value="Environment">Environment</option>
+    <option value="Social Media">Social Media</option>
+    <option value="Healthcare">Healthcare</option>
+    <option value="Professional Development">Professional Development</option>
+  </select>
+  <p>Are you part of any other Non-Tech Societies?</p>
+  <label>
+    <input name="other soc" value="yes" type="radio" />Yes
+    <input name="other soc" value="no" type="radio" />No
+  </label>
+
+  <p>
+    How many Ngo/collab Contacts you can promise?
+    <span class="clue">(Check all that apply)</span>
+  </p>
+
+  <label><input name="prefer" value="1" type="checkbox" />1</label>
+  <label><input name="prefer" value="2" type="checkbox" />2</label>
+  <label><input name="prefer" value="3" type="checkbox" />3</label>
+  <label><input name="prefer" value="4+" type="checkbox" />4+</label>
+
+  <p>Any comments or suggestions?</p>
+  <textarea
+    id="comments"
+    class="input-textarea"
+    name="comment"
+    placeholder="Enter your comment here..."
+  ></textarea>
+
+  <button type="submit" id="submit" class="submit-button">Submit</button>
+</form>
